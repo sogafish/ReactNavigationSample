@@ -5,7 +5,10 @@ import {
   createStackNavigator,
   StackScreenProps,
 } from '@react-navigation/stack';
-import { Detail, Home } from './pages';
+import { Detail, Home, PageList } from './pages';
+import { NAMES, RootStackParamList } from './pages/names';
+
+const { HOME, DETAIL, PAGE_LIST } = NAMES;
 
 const Stack = createStackNavigator();
 
@@ -13,14 +16,17 @@ const App: React.FC = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Home" options={{ title: 'ホーム' }}>
-          {(props: StackScreenProps<{}>) => <Home {...props} isExtra />}
+        <Stack.Screen name={HOME} options={{ title: 'ホーム' }}>
+          {(props: StackScreenProps<RootStackParamList>) => (
+            <Home {...props} isExtra />
+          )}
         </Stack.Screen>
         <Stack.Screen
-          name="Detail"
+          name={DETAIL}
           component={Detail}
           options={{ title: '詳細' }}
         />
+        <Stack.Screen name={PAGE_LIST} component={PageList} />
       </Stack.Navigator>
     </NavigationContainer>
   );
