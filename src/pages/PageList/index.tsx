@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ScrollView, View, Text } from 'react-native';
+import { ScrollView, View, Text, TouchableOpacity } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
 import {
   NAMES,
@@ -8,7 +8,6 @@ import {
   RootStackParamList,
 } from '../names';
 import { styles } from './styles';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const nameKeyList = Object.keys(NAMES);
 
