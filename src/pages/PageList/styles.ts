@@ -4,7 +4,7 @@ const SIDE_PADDING = 10;
 
 export const styles = StyleSheet.create({
   pageList: {
-    marginVertical: 20,
+    paddingVertical: 20,
   },
   listContainer: {
     paddingBottom: 20,
