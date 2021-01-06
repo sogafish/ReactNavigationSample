@@ -12,6 +12,8 @@ import { styles } from './styles';
 
 const nameKeyList = Object.keys(NAMES);
 
+const { PAGE_LIST } = NAMES;
+
 function ListItem({
   onPress,
   pageName,
@@ -36,7 +38,9 @@ function ListItem({
   );
 }
 
-export function PageList(props: StackScreenProps<RootStackParamList>) {
+export function PageList(
+  props: StackScreenProps<RootStackParamList, typeof PAGE_LIST>,
+) {
   const { navigation } = props;
   const goBack = React.useCallback(() => navigation.goBack(), [navigation]);
   const popToTop = React.useCallback(() => navigation.popToTop(), [navigation]);

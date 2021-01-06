@@ -12,7 +12,7 @@ export type PageNameKeyType = keyof typeof NAMES;
 export type PageNameType = typeof NAMES[PageNameKeyType];
 
 export type RootStackParamList = {
-  [HOME]: undefined;
+  [HOME]: {};
   [DETAIL]: {
     userId?: number;
   };

@@ -1,15 +1,11 @@
 import * as React from 'react';
 import { View, Text, Button } from 'react-native';
-import { RouteProp } from '@react-navigation/native';
 import { StackScreenProps } from '@react-navigation/stack';
 import { RootStackParamList, NAMES } from '../names';
 
 const { DETAIL } = NAMES;
 
-interface IProps extends StackScreenProps<RootStackParamList> {
-  route: RouteProp<RootStackParamList, typeof DETAIL>;
-  isExtra: boolean;
-}
+interface IProps extends StackScreenProps<RootStackParamList, typeof DETAIL> {}
 
 export function Detail(props: IProps) {
   const { navigation, route } = props;

@@ -3,7 +3,8 @@ import { View, Text, Button } from 'react-native';
 import { StackScreenProps } from '@react-navigation/stack';
 import { NAMES, RootStackParamList } from '../names';
 
-interface IProps extends StackScreenProps<RootStackParamList> {
+interface IProps
+  extends StackScreenProps<RootStackParamList, typeof NAMES.HOME> {
   isExtra: boolean;
 }
 
