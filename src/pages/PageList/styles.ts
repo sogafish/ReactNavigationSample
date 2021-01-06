@@ -7,14 +7,22 @@ export const styles = StyleSheet.create({
     paddingVertical: 20,
   },
   listContainer: {
-    paddingBottom: 20,
+    paddingTop: 10,
+    paddingBottom: 10,
     backgroundColor: '#fff',
   },
-  listItem: {},
-  listItemInnerContainer: {
+  followingList: {
+    marginTop: 20,
+  },
+  containerInner: {
     marginLeft: SIDE_PADDING,
+  },
+  listItem: {
+    paddingLeft: 10,
     borderBottomColor: '#cccccc',
     borderBottomWidth: 1,
+  },
+  listItemInnerContainer: {
     justifyContent: 'center',
     paddingVertical: 10,
   },
