@@ -50,7 +50,14 @@ export function PageList(props: StackScreenProps<RootStackParamList>) {
         {nameKeyList.map((pageKey: string, idx: number) => {
           const _pageKey = pageKey as PageNameKeyType;
           const pageName = NAMES[_pageKey] as PageNameType;
-          const onPressItem = () => navigation.navigate(pageName);
+          const onPressItem = () => {
+            if (pageName === NAMES.DETAIL) {
+              return navigation.navigate(pageName, {
+                userId: Math.floor(Math.random() * 10),
+              });
+            }
+            navigation.navigate(pageName);
+          };
           const isLastChildren = nameKeyList.length === idx + 1;
 
           return (
@@ -71,7 +78,14 @@ export function PageList(props: StackScreenProps<RootStackParamList>) {
         {nameKeyList.map((pageKey: string, idx: number) => {
           const _pageKey = pageKey as PageNameKeyType;
           const pageName = NAMES[_pageKey] as PageNameType;
-          const onPressItem = () => navigation.push(pageName);
+          const onPressItem = () => {
+            if (pageName === NAMES.DETAIL) {
+              return navigation.push(pageName, {
+                userId: Math.floor(Math.random() * 10),
+              });
+            }
+            navigation.push(pageName);
+          };
           const isLastChildren = nameKeyList.length === idx + 1;
 
           return (

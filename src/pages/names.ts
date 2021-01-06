@@ -13,6 +13,8 @@ export type PageNameType = typeof NAMES[PageNameKeyType];
 
 export type RootStackParamList = {
   [HOME]: undefined;
-  [DETAIL]: undefined;
+  [DETAIL]: {
+    userId?: number;
+  };
   [PAGE_LIST]: undefined;
 };
