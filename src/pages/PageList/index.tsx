@@ -84,6 +84,8 @@ export function PageList(
           const pageName = NAMES[_pageKey] as PageNameType;
           const onPressItem = () => {
             if (pageName === NAMES.DETAIL) {
+              navigation.setOptions({ title: 'BackBackBack' });
+
               return navigation.push(pageName, {
                 userId: Math.floor(Math.random() * 10),
               });
