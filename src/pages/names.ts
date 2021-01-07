@@ -1,11 +1,13 @@
 const HOME = 'Home';
 const DETAIL = 'Detail';
 const PAGE_LIST = 'PageList';
+const TOOL = 'Tool';
 
 export const NAMES = {
   HOME,
   DETAIL,
   PAGE_LIST,
+  TOOL,
 } as const;
 
 export type PageNameKeyType = keyof typeof NAMES;
@@ -17,4 +19,5 @@ export type RootStackParamList = {
     userId?: number;
   };
   [PAGE_LIST]: undefined;
+  [TOOL]: undefined;
 };

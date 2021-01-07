@@ -2,11 +2,11 @@ import 'react-native-gesture-handler';
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Detail, Home, PageList } from './pages';
+import { Detail, Home, PageList, Tool } from './pages';
 import { NAMES } from './pages/names';
-import { HeaderLogoTitle } from './components/HeaderLogoTitle';
+import { HeaderLogoTitle, HeaderRightButton } from './components';
 
-const { HOME, DETAIL, PAGE_LIST } = NAMES;
+const { HOME, DETAIL, PAGE_LIST, TOOL } = NAMES;
 
 const Stack = createStackNavigator();
 
@@ -38,6 +38,19 @@ const App: React.FC = () => {
           component={PageList}
           options={{
             headerTitle: () => <HeaderLogoTitle />,
+          }}
+        />
+        <Stack.Screen
+          name={TOOL}
+          component={Tool}
+          options={{
+            headerTitle: () => <HeaderLogoTitle />,
+            headerRight: () => (
+              <HeaderRightButton
+                text="Yo"
+                onPress={() => console.log('Pressed')}
+              />
+            ),
           }}
         />
       </Stack.Navigator>
