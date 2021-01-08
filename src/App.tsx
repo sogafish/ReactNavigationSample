@@ -6,7 +6,7 @@ import { Detail, Home, PageList, Tool } from './pages';
 import { NAMES } from './pages/names';
 import { HeaderLogoTitle, HeaderRightButton } from './components';
 
-const { HOME, DETAIL, PAGE_LIST, TOOL } = NAMES;
+const { HOME, DETAIL, PAGE_LIST, TOOL, TOOL2 } = NAMES;
 
 const Stack = createStackNavigator();
 
@@ -53,6 +53,9 @@ const App: React.FC = () => {
             ),
           }}
         />
+        <Stack.Screen name={TOOL2}>
+          {(props: $FixMe) => <Tool {...props} changeRightButton />}
+        </Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );
